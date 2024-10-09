@@ -1,0 +1,19 @@
+﻿@model EventRegestration1.Models.Registration
+
+<h2>Participant registration</h2>
+
+<form asp-action="CreateRegistration" method="post">
+    <div>
+        <label asp-for="ParticipantName"></label>
+        <input asp-for="ParticipantName" />
+        <span asp-validation-for="ParticipantName" />
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" />
+    </div>
+    <input type="hidden" asp-for="EventId" value="@ViewData["EventId"]" />
+    <button type="submit">Regestor</button>
+</form>
+

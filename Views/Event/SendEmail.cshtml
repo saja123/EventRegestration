@@ -1,0 +1,18 @@
+﻿@model EventRegestration1.Models.SendConfirmationEmailViewModel
+
+<h2>Send Recpient Email</h2>
+
+<form asp-action="SendConfirmationEmail" method="post">
+    <div>
+        <label asp-for="RecipientEmail"></label>
+        <input asp-for="RecipientEmail" />
+        <span asp-validation-for="RecipientEmail" />
+    </div>
+    <div>
+        <label asp-for="ParticipantName"></label>
+        <input asp-for="ParticipantName" />
+        <span asp-validation-for="ParticipantName" />
+    </div>
+    <button type="submit">Send</button>
+</form>
+

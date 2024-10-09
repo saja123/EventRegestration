@@ -1,0 +1,26 @@
+﻿@model IEnumerable<EventRegestration1.Models.EventModel>
+
+<h2>Events</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Event Title</th>
+            <th>Date</th>
+            <th>Regestration</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evt in Model)
+        {
+            <tr>
+                <td>@evt.Name</td>
+                <td>@evt.Date.ToShortDateString()</td>
+                <td>
+                    <a asp-action="registration" asp-route-id="@evt.Id">Regestration</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
